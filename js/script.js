@@ -1,8 +1,13 @@
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
-
+const restart = document.querySelector(".cta");
+let score = 0;
+ 
 const jump = () => {
   mario.classList.add("jump-mario");
+  score = score + 1;
+  let scoreboard = document.getElementById("score");
+  scoreboard.innerHTML = "Score: " + score;
 
   setTimeout(() => {
     mario.classList.remove("jump-mario");
@@ -25,6 +30,8 @@ const loopGame = setInterval(() => {
     mario.src = "./Images/mario-game-over.png";
     mario.style.width = "75px";
     mario.style.marginLeft = "45px";
+
+    restart.style.display = "inline-block";
 
     clearInterval(loopGame);
   }

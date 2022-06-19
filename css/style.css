@@ -37,6 +37,43 @@
     animation: clouds-animation 20s infinite linear;
 }
 
+#score{
+
+    font-size: 60px;
+    text-shadow: -2px 2px 0px black ;
+    color: rgb(255, 213, 0);
+    position:absolute;
+    top: 38%;
+    left: 50%;
+    text-align: center;
+
+}
+
+.game .cta{
+    display: none;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+    position:absolute;
+    bottom: 38%;
+    left: 50%;
+    text-align: center
+
+
+}
+.game .cta:hover{
+    color: white;
+    font-weight: 500;
+    background-color: gold;
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
